@@ -18,11 +18,18 @@
       <p id="surprise" class="surprise" aria-live="polite" hidden>
         Tu viens de faire le premier pas. À toi la suite !
       </p>
+      <section class="counter" aria-label="Compteur de clics">
+        <p>Clics comptés : <strong id="count">0</strong></p>
+        <button id="count-button" type="button" aria-label="Ajouter un clic">+1</button>
+      </section>
     </main>
     <script>
       const button = document.querySelector("#surprise-button");
       const surprise = document.querySelector("#surprise");
       const themeButton = document.querySelector("#theme-button");
+      const countButton = document.querySelector("#count-button");
+      const countDisplay = document.querySelector("#count");
+      let count = 0;
 
       button.addEventListener("click", () => {
         surprise.hidden = !surprise.hidden;
@@ -33,6 +40,11 @@
         const nightMode = document.body.classList.toggle("night-mode");
         themeButton.setAttribute("aria-pressed", nightMode);
         themeButton.textContent = nightMode ? "Désactiver le mode nuit" : "Activer le mode nuit";
+      });
+
+      countButton.addEventListener("click", () => {
+        count += 1;
+        countDisplay.textContent = count;
       });
     </script>
   </body>

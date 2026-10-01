@@ -67,6 +67,25 @@ button:focus-visible {
   line-height: 1.5;
 }
 
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid #dce5d9;
+}
+
+.counter p {
+  margin: 0;
+}
+
+.counter button {
+  min-width: 48px;
+  padding: 10px 14px;
+}
+
 body.night-mode {
   background: #202c27;
   color: #eef3ea;
@@ -88,6 +107,10 @@ body.night-mode .eyebrow {
 
 body.night-mode .surprise {
   color: #c0d3b7;
+}
+
+body.night-mode .counter {
+  border-color: #4d6256;
 }
 
 body.night-mode button:focus-visible {
