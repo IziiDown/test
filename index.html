@@ -3,14 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ma page simple</title>
+    <title>Un petit bonjour</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="box">
+    <main class="box">
+      <p class="eyebrow">PETIT PROJET, GRAND DÉPART</p>
       <h1>Bonjour !</h1>
-      <p>Ceci est une page HTML très simple.</p>
-      <button>Cliquez ici</button>
-    </div>
+      <p class="intro">Une page toute simple, avec une petite surprise.</p>
+      <button id="surprise-button" type="button">Voir la surprise</button>
+      <p id="surprise" class="surprise" aria-live="polite" hidden>
+        Tu viens de faire le premier pas. À toi la suite !
+      </p>
+    </main>
+    <script>
+      const button = document.querySelector("#surprise-button");
+      const surprise = document.querySelector("#surprise");
+
+      button.addEventListener("click", () => {
+        surprise.hidden = !surprise.hidden;
+        button.textContent = surprise.hidden ? "Voir la surprise" : "Cacher la surprise";
+      });
+    </script>
   </body>
 </html>

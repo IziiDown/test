@@ -1,30 +1,63 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f3f3f3;
-  color: #333;
+  font-family: "Trebuchet MS", sans-serif;
+  background: #f2f5ef;
+  color: #26352c;
   margin: 0;
-  padding: 40px;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: grid;
+  place-items: center;
 }
 
 .box {
-  max-width: 500px;
-  margin: auto;
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: min(100%, 460px);
+  box-sizing: border-box;
+  background: #fffefa;
+  padding: 40px;
+  border: 1px solid #dce5d9;
+  border-radius: 8px;
+  box-shadow: 8px 8px 0 #dce5d9;
+}
+
+.eyebrow {
+  color: #66806b;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.intro {
+  line-height: 1.6;
 }
 
 h1 {
-  color: #222;
+  color: #26352c;
   margin-top: 0;
 }
 
 button {
-  background: #4caf50;
+  background: #d65a3a;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 18px;
+  border-radius: 4px;
   cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #b9472c;
+}
+
+button:focus-visible {
+  outline: 3px solid #26352c;
+  outline-offset: 3px;
+}
+
+.surprise {
+  margin-bottom: 0;
+  padding-top: 16px;
+  color: #4d6a53;
+  line-height: 1.5;
 }
