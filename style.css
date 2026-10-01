@@ -46,6 +46,11 @@ button {
   font-weight: bold;
 }
 
+.theme-button {
+  display: block;
+  margin-top: 10px;
+}
+
 button:hover {
   background: #b9472c;
 }
@@ -60,4 +65,31 @@ button:focus-visible {
   padding-top: 16px;
   color: #4d6a53;
   line-height: 1.5;
+}
+
+body.night-mode {
+  background: #202c27;
+  color: #eef3ea;
+}
+
+body.night-mode .box {
+  background: #2c3a33;
+  border-color: #4d6256;
+  box-shadow: 8px 8px 0 #17201c;
+}
+
+body.night-mode h1 {
+  color: #f3f2e8;
+}
+
+body.night-mode .eyebrow {
+  color: #b3c6aa;
+}
+
+body.night-mode .surprise {
+  color: #c0d3b7;
+}
+
+body.night-mode button:focus-visible {
+  outline-color: #f5f3e8;
 }

@@ -12,6 +12,9 @@
       <h1>Bonjour !</h1>
       <p class="intro">Une page toute simple, avec une petite surprise.</p>
       <button id="surprise-button" type="button">Voir la surprise</button>
+      <button id="theme-button" class="theme-button" type="button" aria-pressed="false">
+        Activer le mode nuit
+      </button>
       <p id="surprise" class="surprise" aria-live="polite" hidden>
         Tu viens de faire le premier pas. À toi la suite !
       </p>
@@ -19,10 +22,17 @@
     <script>
       const button = document.querySelector("#surprise-button");
       const surprise = document.querySelector("#surprise");
+      const themeButton = document.querySelector("#theme-button");
 
       button.addEventListener("click", () => {
         surprise.hidden = !surprise.hidden;
         button.textContent = surprise.hidden ? "Voir la surprise" : "Cacher la surprise";
+      });
+
+      themeButton.addEventListener("click", () => {
+        const nightMode = document.body.classList.toggle("night-mode");
+        themeButton.setAttribute("aria-pressed", nightMode);
+        themeButton.textContent = nightMode ? "Désactiver le mode nuit" : "Activer le mode nuit";
       });
     </script>
   </body>
